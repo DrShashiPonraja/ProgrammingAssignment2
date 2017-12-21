@@ -6,7 +6,7 @@ makeCacheMatrix <- function(x = matrix()) {
   inverseMatrix <- NULL
   set <- function(y){
     x<<-y
-    inverseMatrix <- NULL
+    inverseMatrix <<- NULL
   }
   
   get <-function(){
@@ -33,7 +33,7 @@ cacheSolve <- function(x, ...) {
     inverseMatrix<-solve(matrixToSolve)
     x$setInverse(inverseMatrix)
   }else{
-    
+    #inverse has already been solved, don't need to do anything else
   }
   
   
